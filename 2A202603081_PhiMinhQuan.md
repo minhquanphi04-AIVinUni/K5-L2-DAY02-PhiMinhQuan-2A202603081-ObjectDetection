@@ -24,14 +24,14 @@
 
 | Chỉ số | Trước sửa | Sau sửa nếu có |
 |---|---:|---:|
-| TP | | |
-| FP | | |
-| FN | | |
-| Precision | | |
-| Recall | | |
-| F1 | | |
-| mean_iou_of_matches | | |
-| passed | | |
+| TP | 537 | |
+| FP | 972 | |
+| FN | 116 | |
+| Precision | 0.3559 | |
+| Recall | 0.8224 | |
+| F1 | 0.4968 | |
+| mean_iou_of_matches | 0.8433 | |
+| passed | false | |
 
 Dẫn tới `outputs/annotation_evaluation.json` trong repo. Nếu rework, ghi ảnh, lỗi đã kiểm, quyết định sửa/giữ và lý do. Không suy nguyên nhân chỉ từ FP/FN. Không có rework thì ghi rõ.
 
