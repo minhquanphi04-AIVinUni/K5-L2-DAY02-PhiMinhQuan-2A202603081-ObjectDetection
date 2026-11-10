@@ -14,14 +14,14 @@
 ## Quy tắc chung
 
 - Box bám sát vật thể nghĩa là: toàn bộ pixel của vật thể nằm gọn trong box, viền box tiếp xúc sát với pixel ngoài cùng của vật thể
-- Vật thể bị che khuất: vật thể bị một vật khác trong ảnh che khuất nên trên ảnh không hiện kích thước thật của vật thể
-- Vật thể bị cắt bởi rìa ảnh: vật thể bị rìa ảnh cắt; một phần thực chất của vật thể nằm bên ngoài rìa ảnh
-- Vật thể rất nhỏ/mơ hồ: vật thể quá nhỏ, vỡ nét hoặc không thể được xác định là class gì
+- Vật thể bị che khuất: "occluded" vật thể bị một vật khác trong ảnh che khuất nên trên ảnh không hiện kích thước thật của vật thể
+- Vật thể bị cắt bởi rìa ảnh: "truncated" vật thể bị rìa ảnh cắt; một phần thực chất của vật thể nằm bên ngoài rìa ảnh
+- Vật thể rất nhỏ/mơ hồ: vật thể quá nhỏ, vỡ nét hoặc không thể được xác định là class gì (Tình huống số 3)
 
 ## Ghi lại quyết định cho ít nhất ba ca mơ hồ
 
 | Ảnh | Tình huống | Quyết định cuối | Lý do theo schema |
 | --- | --- | --- | --- |
-| `drive_...` |  | | |
-| `drive_...` | | | |
-| `drive_...` | | | |
+| `drive_045.jpg` | Là phương tiện nhỏ, nhưng mờ, không xác định được | Thêm vào label vì đã xác định được là phương tiện | Nằm trên giao thông + là phương tiện nên có tiềm ẩn rủi ro về an toàn |
+| `drive_028.jpg` | Là phương tiện lớn, nhưng mờ, không xác định được | Thêm vào label vì đã xác định được là phương tiện | Nằm trên giao thông + là phương tiện nên có tiềm ẩn rủi ro về an toàn |
+| `drive_003.jpg` | Không xác định được là gì nhưng nó nằm ở trên đường giao thông (Phía xa sâu bên trái trên của ảnh | Không nên cho vào label và train | Vì như vậy model sẽ bắt cả nhiễu |
