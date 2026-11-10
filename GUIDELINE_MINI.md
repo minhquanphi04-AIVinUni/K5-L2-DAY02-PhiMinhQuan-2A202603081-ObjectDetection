@@ -6,17 +6,17 @@
 
 | Lớp | Định nghĩa của bạn | Ví dụ/điểm phân biệt |
 | --- | --- | --- |
-| `car` | xe trọng tải từ 2 đến 7 người, có cửa mở ở 2 bên cánh | xe con, sedan, SUV, taxi, xe bán tải |
-| `truck` | xe trọng tải lớn đến rất lớn để chở hàng, đồ, vật liệu, có thùng xe hở ở phía sau và mở từ đằng sau | xe tải chở hàng, xe đầu kéo, xe container |
-| `bus` | xe có trọng tải lớn, dài và dùng để chở người | xe bus công cộng, xe khách du lịch, xe bus 2 tầng |
-| `van` | xe có trọng tải vừa, có thể chở hàng hoặc người; có dáng hình hộp liền, kín, có phân tách giữa buồng lái và khoang sau; thường có cửa trượt to để mở khoang sau | mini van, xe van chở hàng |
+| `car` | xe con (sedan, SUV, taxi, xe bán tải/pickup); phân loại theo loại xe, không dựa duy nhất vào số chỗ | xe con, sedan, SUV, taxi, xe bán tải |
+| `truck` | xe tải chuyên chở hàng (thùng hở, thùng kín, đầu kéo/container); không bao gồm pickup được xếp vào `car` | xe tải chở hàng, xe đầu kéo, xe container |
+| `bus` | xe buýt và xe khách dạng bus (bao gồm minibus chở khách), không chỉ xe cỡ lớn | xe bus công cộng, xe khách du lịch, xe bus 2 tầng |
+| `van` | xe van/minivan chở người hoặc hàng, thường có thân hộp; phải phân biệt với xe buýt/minibus và xe con | mini van, xe van chở hàng |
 
 ## Quy tắc chung
 
-- Box bám sát vật thể nghĩa là: toàn bộ pixel của vật thể nằm gọn trong box, viền box tiếp xúc sát với pixel ngoài cùng của vật thể
+- Box bám sát vật thể nghĩa là: box ôm sát phần vật thể thực tế nhìn thấy trong ảnh, không ước lượng thêm phần đã bị che khuất hay nằm ngoài ảnh
 - Vật thể bị che khuất: "occluded" vật thể bị một vật khác trong ảnh che khuất nên trên ảnh không hiện kích thước thật của vật thể
 - Vật thể bị cắt bởi rìa ảnh: "truncated" vật thể bị rìa ảnh cắt; một phần thực chất của vật thể nằm bên ngoài rìa ảnh
-- Vật thể rất nhỏ/mơ hồ: vật thể quá nhỏ, vỡ nét hoặc không thể được xác định là class gì (Tình huống số 3)
+- Vật thể rất nhỏ/mơ hồ: nếu không đủ thông tin để chọn một trong bốn class thì ghi lại để review/hỏi giảng viên; không suy ra class chỉ vì đối tượng nằm trên đường
 
 ## Ghi lại quyết định cho ít nhất ba ca mơ hồ
 
@@ -25,3 +25,6 @@
 | `drive_045.jpg` | Là phương tiện nhỏ, nhưng mờ, không xác định được | Thêm vào label vì đã xác định được là phương tiện | Nằm trên giao thông + là phương tiện nên có tiềm ẩn rủi ro về an toàn |
 | `drive_028.jpg` | Là phương tiện lớn, nhưng mờ, không xác định được | Thêm vào label vì đã xác định được là phương tiện | Nằm trên giao thông + là phương tiện nên có tiềm ẩn rủi ro về an toàn |
 | `drive_003.jpg` | Không xác định được là gì nhưng nó nằm ở trên đường giao thông (Phía xa sâu bên trái trên của ảnh | Không nên cho vào label và train | Vì như vậy model sẽ bắt cả nhiễu |
+
+
+> **CẦN HỌC VIÊN RÀ SOÁT TRƯỚC KHI NỘP:** Ở `drive_045.jpg` và `drive_028.jpg`, bảng vẫn ghi *đã thêm nhãn dù không xác định được loại phương tiện*, với lý do “nằm trên đường”. Lý do này chưa phù hợp schema bốn class. Giữ nguyên ghi chép quyết định ban đầu để minh bạch, nhưng cần bạn xem lại ảnh, xác nhận loại xe (nếu có thể), sau đó cập nhật **quyết định cuối và lý do thực tế**. Đừng tự khẳng định đã sửa annotation nếu chưa sửa.
