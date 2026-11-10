@@ -9,9 +9,9 @@
 - Link repo bài làm: https://github.com/minhquanphi04-AIVinUni/K5-L2-DAY02-PhiMinhQuan-2A202603081-ObjectDetection.git
 - Link Colab đã chạy:
 
-## 2. Schema và mini guideline (../../GUIDELINE_MINI.md)
+## 2. Schema và mini guideline 
 
-Dẫn tới [GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). 
+[GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). 
 ## 3. Annotation và self-QC
 
 - Số file nhãn train:
