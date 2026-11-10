@@ -1,14 +1,12 @@
 # Báo cáo cá nhân — Ngày 2 Object Detection
 
-Đổi tên file theo `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md`. Điền kết quả thật, xóa dòng hướng dẫn khi nộp. Xem [quy định nộp](../../SUBMISSION.md).
-
 ## 1. Thông tin học viên
 
-- Họ tên:
-- MSSV:
-- Email:
-- Lớp:
-- Link repo bài làm:
+- Họ tên: Phí Minh Quân
+- MSSV: 2A202603081
+- Email: minhquanphi04@gmail.com
+- Lớp: 2B - LAB - E402
+- Link repo bài làm: https://github.com/minhquanphi04-AIVinUni/K5-L2-DAY02-PhiMinhQuan-2A202603081-ObjectDetection.git
 - Link Colab đã chạy:
 
 ## 2. Schema và mini guideline
