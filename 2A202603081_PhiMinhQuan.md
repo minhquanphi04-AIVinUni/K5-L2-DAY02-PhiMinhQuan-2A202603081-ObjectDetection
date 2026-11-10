@@ -11,7 +11,7 @@
 
 ## 2. Schema và mini guideline 
 
-[GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). 
+[[GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). ](https://github.com/minhquanphi04-AIVinUni/K5-L2-DAY02-PhiMinhQuan-2A202603081-ObjectDetection/blob/6678ada2574d1eee66176e6023fa7ed8f7612084/GUIDELINE_MINI.md)
 ## 3. Annotation và self-QC
 
 - Số file nhãn train:
